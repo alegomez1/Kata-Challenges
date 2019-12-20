@@ -1,0 +1,56 @@
+//link: https://www.codewars.com/kata/tail-swap/train/javascript
+
+tailSwap = (arr) => {
+    let firstArray = arr[0]
+    let secondArray = arr[1]
+    let semi1 = false
+    let semi2 = false
+
+    let firstStart = []
+    let firstEnd = []
+
+    let secondStart = []
+    let secondEnd = []
+
+    for(let i = 0 ; i<firstArray.length; i++){
+        if( (firstArray[i] != ':') && (semi1 === false) ){
+            console.log(firstArray[i])
+            firstStart.push(firstArray[i])
+        }
+        if(firstArray[i] == ':'){
+            console.log('SEMI COLON')
+            semi1 = true
+            i++
+        }
+        if((semi1===true)){
+            firstEnd.push(firstArray[i])
+        }
+    }
+
+    for(let i = 0 ; i<secondArray.length; i++){
+        if( (secondArray[i] != ':') && (semi2 === false) ){
+            console.log(secondArray[i])
+            secondStart.push(secondArray[i])
+        }
+        if(secondArray[i] == ':'){
+            console.log('SEMI COLON')
+            semi2 = true
+            i++
+        }
+        if((semi2===true)){
+            secondEnd.push(secondArray[i])
+        }
+    }
+
+    let firstStartString = firstStart.join('')
+    let firstEndString = firstEnd.join('')
+    let secondStartString = secondStart.join('')
+    let secondEndString = secondEnd.join('')
+
+    let first = firstStartString + ':' + secondEndString
+    let second = secondStartString + ':' + firstEndString
+    
+    let newArray = [first, second]
+    return newArray
+
+}
