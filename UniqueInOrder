@@ -1,0 +1,13 @@
+// link: https://www.codewars.com/kata/unique-in-order
+
+var uniqueInOrder=function(iterable){
+    let empty = []
+    for (let i=0;i<iterable.length;i++){
+        let current = iterable[i]
+
+        if (current != iterable[i+1]){
+            empty.push(current)
+        }
+    }
+    return empty
+}
