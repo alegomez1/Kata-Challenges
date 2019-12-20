@@ -1,0 +1,27 @@
+// link: https://www.codewars.com/kata/52b757663a95b11b3d00062d
+
+ function toWeirdCase(string){
+     let empty = ""
+
+     strArray = string.split('')
+     let upper = true
+     let lower = false
+     for (let i=0; i<strArray.length;i++){
+         if (strArray[i] === ' '){
+             empty = empty.concat(' ')
+             upper = true
+             lower=false
+         }
+    else if (upper){
+        empty = empty.concat(strArray[i].toUpperCase())
+             upper= !upper
+             lower= !lower
+    }
+    else if(lower){
+        empty = empty.concat(strArray[i].toLowerCase())
+             upper= !upper
+             lower= !lower
+    }
+     }
+    return empty
+}
