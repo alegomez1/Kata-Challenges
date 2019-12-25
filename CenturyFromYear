@@ -1,0 +1,16 @@
+//link : https://www.codewars.com/kata/century-from-year/train/javascript
+
+century = (year) => {
+    let yearString = year.toString()
+    let yearArray = []
+    for(let i=0; i<yearString.length;i++){
+        yearArray.push(yearString[i])
+    }
+    let firstTwo = Number(yearArray[0].concat(yearArray[1]))
+    if(yearArray[3] !== '0'){
+        return firstTwo+1
+    }
+    else{
+        return firstTwo
+    }
+}
