@@ -1,0 +1,21 @@
+#https://www.codewars.com/kata/5a2be17aee1aaefe2a000151/train/ruby
+
+def array_plus_array(arr1,arr2)
+    sum1 = 0
+    sum2 = 0
+
+    (0..arr1.length-1).each do |i|
+        puts "current number: #{arr1[i]}"
+        sum1 += arr1[i]
+    end
+    puts "SUM1: #{sum1}"
+
+    (0..arr2.length-1).each do |j|
+        puts "current number: #{arr2[j]}"
+        sum2 += arr2[j]
+    end
+    puts "SUM2: #{sum2}"
+
+    total_sum = sum1+sum2
+    return total_sum
+end
