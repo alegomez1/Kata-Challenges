@@ -5,8 +5,8 @@ def generate_range(min, max, step)
   (min..max).each do |i|
     if start <= max
       range.push(start)
-      start = start += step
-    end
+    start = start += step
   end
-  return range
+  end
+return range
 end
