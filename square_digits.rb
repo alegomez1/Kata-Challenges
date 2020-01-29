@@ -5,6 +5,6 @@ def square_digits(number)
   (0..num_array.length-1).each do |i|
     real_array << num_array[i].to_i ** 2
   end
-return real_array.join('').to_i
+  return real_array.join('').to_i
 end
 square_digits(1234)
